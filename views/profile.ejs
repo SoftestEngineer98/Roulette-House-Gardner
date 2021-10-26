@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>21 Savage Fan Site</title>
+		<link
+			rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header text-center">
+				<h1><span class="fa fa-anchor"></span> Roulette Admin Page</h1>
+				<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+				<a href="/" class="btn btn-default btn-sm">Back to Table</a>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>Total Revenue</h3>
+					<% game.forEach(el => {%>
+					<h2>House Wins: <%=el.wins%></h2>
+					<h2>Revenue won: $<%=el.moneyWon%></h2>
+					<h2>Player Wins: <%=el.losses%></h2>
+					<h2>Revenue lost: $<%=el.moneyLost%></h2>
+					<h2>Revenue$<%=el.revenue%></h2>
+					<%})%>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://kit.fontawesome.com/c0e668a8ad.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

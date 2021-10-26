@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>21 To-Do</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header class="page-header text-center">
+				<h1>Roulette</h1>
+				<a href="/login" class="btn btn-default"
+					><span class="fa fa-user"></span> Admin Login</a
+				>
+			</header>
+			<% game.forEach(el => {%>
+			<input
+				id="<%=el._id%>"
+				type="number"
+				placeholder="Enter your Bet"
+				name="msg"
+				class="betAmount"
+			/>
+			<input
+				type="hidden"
+				value=""
+				placeholder="Enter your Bet"
+				name="bet"
+				class="betValue"
+			/>
+
+			<input type="button" value="red" class="betChoice" />
+			<input type="button" value="black" class="betChoice" />
+			<input type="button" value="green" class="betChoice" />
+			<button type="submit" class="submitBtn">Submit</button>
+			<h2 id="result"></h2>
+			<%})%>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
